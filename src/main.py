@@ -23,8 +23,8 @@ def main():
     net = network.Network(
         layers=[
             FullyConnectedLayer(size=784),
-            FullyConnectedLayer(size=100, activation=SigmoidActivation),
-            FullyConnectedLayer(size=30, activation=SigmoidActivation),
+            FullyConnectedLayer(size=100, activation=ReSoftPlusActivation),
+            FullyConnectedLayer(size=30, activation=ReSoftPlusActivation),
             SoftmaxLayer(size=10),
         ],
         save=True,
